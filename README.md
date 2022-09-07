@@ -100,9 +100,8 @@ The project is a simple web application, that is packaged in a Docker container,
 
 ### Workshop topics covered
 
-#### Chapter 1 - Basics of CI/CD and CircleCI
+#### Chapter 1 - Basics of CircleCI
 
-- CI/CD Basics
 - YAML
 - Setting up the first pipeline
 - Writing a job and workflow
