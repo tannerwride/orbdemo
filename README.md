@@ -21,7 +21,7 @@ To open this in Gitpod, copy your fork's GitHub URL, and combine it with this Gi
 
 The full URL should look something like this: `https://gitpod.io/#/https://github.com/YOUR_GITHUB_USERNAME/cicd-workshop`.
 
-This lets you spin up an environment with all the dependencies preinstalled, remotely connect to it, and work on it as it was on your machine. This is much faster, believe us, we measured it with science. 
+This lets you spin up an environment with all the dependencies preinstalled, remotely connect to it, and work on it as if it was on your machine. This is much faster, believe us, we measured it with science. 
 
 ### If NOT using Gitpod
 
@@ -82,9 +82,7 @@ snyk_token = "YOUR_SNYK_TOKEN"
 
 ### How this workshop works
 
-We will go from a chapter to chapter - depending on people's background we might skip a chapter (Chapter 1 is for complete beginners to CI/CD and subsequent chapters build on top of that, for example).
-
-To jump between chapters we have prepared a set of handy scripts you can run in your terminal, which will set up your environment so you can follow along.
+We will go from a chapter to chapter - depending on people's background we might skip a chapter (Chapter 1 is for complete beginners to CI/CD and subsequent chapters build on top of that, for example). To jump between chapters we have prepared a set of handy scripts you can run in your terminal, which will set up your environment so you can follow along.
 
 The scripts to run are:
 
@@ -98,8 +96,7 @@ The chapters will copy and overwrite certain files in your workspace, so after r
 
 ### Overview of the project
 
-The project is a simple web application, that is packaged in a Docker container, and deployed on Kubernetes - hosted on DigitalOcean infrastructure. 
-We also have some tests, a security scan, building the image, provisioning the infrastructure and deploying the application.
+The project is a simple web application, that is packaged in a Docker container, and deployed on Kubernetes - hosted on DigitalOcean infrastructure. We also have some tests, a security scan, building the image, provisioning the infrastructure, and deploying the application.
 
 ### Workshop topics covered
 
