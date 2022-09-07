@@ -100,8 +100,9 @@ The project is a simple web application, that is packaged in a Docker container,
 
 ### Workshop topics covered
 
-#### Chapter 1 - Basics of CI/CD
+#### Chapter 1 - Basics of CI/CD and CircleCI
 
+- CI/CD Basics
 - YAML
 - Setting up the first pipeline
 - Writing a job and workflow
@@ -137,9 +138,8 @@ The project is a simple web application, that is packaged in a Docker container,
 
 ## Chapter 1 - Basics of CircleCI
 
-Most of our work will be in `./circleci/config.yml` - the CircleCI configuration file. This is where we will be describing our CI/CD pipelines.
-This workshop is written in chapters, so you can jump between them by running scripts in `scripts/` dir, if you get lost and want to catch up with something.
-To begin, prepare your environment for the initial state by running the start script: `./scripts/do_1_start.sh`
+Most of our work will be in `./circleci/config.yml` - the CircleCI configuration file. This is where we will be describing our CI/CD pipelines. 
+This workshop is written in chapters, so you can jump between them by running scripts in `scripts/` dir, if you get lost and want to catch up with something. To begin, prepare your environment for the initial state by running the start script: `./scripts/do_1_start.sh`
 
 Go to app.circleci.com, and if you haven't yet, log in with your GitHub account (or create a new one).
 Navigate to the `Projects` tab, and find this workshop project there - `cicd-workshop`.
