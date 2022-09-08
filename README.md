@@ -116,7 +116,7 @@ The project is a simple web application, that is packaged in a Docker container,
 #### Chapter 2 - A realistic CI/CD pipeline
 
 - Run security scan w/ Snyk
-- Cloud native principles
+- Cloud native deployments
 - Provision infrastructure with Terraform on DigitalOcean
 - Deploy to infrastructure
 - Run a smoke test on deployed app
@@ -268,7 +268,7 @@ Most of the things you do in CircleCI web interface can also be done with the AP
 
 - First introduce the Docker orb:
 
-```yaml
+```yaml                 
 orbs:
   node: circleci/node@5.0.2
   docker: circleci/docker@2.1.1
