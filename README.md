@@ -632,7 +632,7 @@ workflows:
           name: Smoke Test K8s App Deployment
           command: |
             source /tmp/do_k8s/dok8s-endpoint
-            ./test/smoke_test $ENDPOINT
+            bash ./test/smoke_test $ENDPOINT
 
 ```
 
