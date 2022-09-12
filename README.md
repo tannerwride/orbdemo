@@ -432,7 +432,7 @@ First make sure you have all the credentials created and set in your `cicd-works
 - DIGITALOCEAN_TOKEN
 - TF_CLOUD_KEY
 
-This tells a cloud provider - in our case Digitalocean - what to create for us, so we can deploy our application. We will use a tool called Terraform for it.
+This tells a cloud provider - in our case Digitalocean - what to create for us, so we can deploy our application. We will use a tool called [https://www.terraform.io/](Terraform) for it.
 
 - Add the orb for Terraform
 
@@ -463,7 +463,7 @@ commands:
             sudo mv ~/doctl /usr/local/bin
 ```
 
-- In app.terraform.io create a new organization, and give it a name. (If you just signed up, you should click "Start from Scratch" to create the organization.) 
+- In https://app.terraform.io create a new organization, and give it a unique name. (If you just signed up, you should click "Start from Scratch" to create the organization.) 
 - Create a new workspace called `cicd-workshop-do` (CLI-driven Workflow > Github.com > Only select repos > cicd-workshop).
 - In the workspace GUI, go to `Settings > General`, and make sure to switch the `Execution Mode` to `Local`.
 
@@ -539,7 +539,7 @@ workflows:
 
 Now that you have provisioned your infrastructure - a Kubernetes cluster on Digitalocean. It's time to deploy the application to this cluster.
 
-- In app.terraform.io create a new workspace called `deploy-cicd-workshop-do`. 
+- In https://app.terraform.io create a new workspace called `deploy-cicd-workshop-do`. 
 In the workspace GUI, go to `Settings`, and make sure to switch the `Execution Mode` to `Local`. You should now have two workspaces. One holds the infrastructure definitions, and one for deployments.
 
 - In the file `terraform/do_k8s_deploy_app/main.tf` locate the `backend "remote"` section and make sure to change the name to your organization:
@@ -616,8 +616,7 @@ workflows:
             - cicd-workshop
 ```
 
-- Now that our application has been deployed it should be running on our brand new Kubernetes cluster! Yay us, but it's not yet time to call it a day. We need to verify that the app is actually running, and for that we need to test in production. Let's introduce something called a Smoke test!
-
+- Now that our application has been deployed it should be running on our brand new Kubernetes cluster! Yay us, but it's not yet time to call it a day. We need to verify that the app is actually running, and for that we need to test in production. Let's introduce something called a [https://circleci.com/blog/smoke-tests-in-cicd-pipelines/](Smoke test)!
 
 - Add a new job - `smoketest_k8s_deployment. This uses a bash script to make HTTP requests to the deployed app and verifies the responses are what we expect. We also use a CircleCI Workspace to pass the endpoint of the deployed application to our test. 
 
