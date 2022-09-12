@@ -1,5 +1,11 @@
 # CI/CD Workshop with CircleCI
 
+## Overview
+
+
+## Purpose
+
+
 ## Prerequisites
 
 1. Knowledge of the Git version control system ([Git Basics](https://www.freecodecamp.org/news/learn-the-basics-of-git-in-under-10-minutes-da548267cc91/))
@@ -23,6 +29,12 @@ The full URL should look something like this: `https://gitpod.io/#/https://githu
 
 This lets you spin up an environment with all the dependencies preinstalled, remotely connect to it, and work on it as if it was on your machine. This is much faster, believe us, we measured it with science. 
 
+#### A quick note on using GitPod
+GitPod is free to use, but you will want to make sure you update the permissions for your GitPod integrations.
+
+1. Login to GitPod.io
+2. Open up https://gitpod.io/integrations
+3. Edit permissions on GitHub to include `public_repo`
 ### If NOT using Gitpod
 
 If you are using Gitpod you're good, everything you need should have been installed already.
