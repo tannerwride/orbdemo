@@ -63,7 +63,7 @@ digitalocean_token = "YOUR_DIGITALOCEAN_TOKEN"
 
 #### Terraform Cloud
 
-- Create an account with Hashicorp Terraform - https://app.terraform.io/ We will use Terraform to provision our infrastructure on Digital Ocean.
+- Create an account with Hashicorp Terraform - https://app.terraform.io/ We will use Terraform to provision our infrastructure on DigitalOcean.
 - Got to your user settings (top right), and select Tokens
 - Create an API token 
 - Replace `"YOUR_TERRAFORM_CLOUD_KEY"` with the generated API token in `credentials.toml`
@@ -98,13 +98,13 @@ We will go from a chapter to chapter - depending on people's background we might
 
 The scripts to run are:
 
-`./scripts/do_1_start.sh` - Beginning of first chapter
-`./scripts/do_2.sh` - End of first chapter/Start of second chapter
-`./scripts/do_3.sh` - End of second chapter/Start of third chapter
-`./scripts/do_4.sh` - Final state
-`./scripts/do_5_dynamic.sh` - Final state using Dynamic configuration
+`./scripts/do_1_start.sh` - Beginning of first chapter  
+`./scripts/do_2.sh` - End of first chapter/Start of second chapter  
+`./scripts/do_3.sh` - End of second chapter/Start of third chapter  
+`./scripts/do_4.sh` - Final state  
+`./scripts/do_5_dynamic.sh` - Final state using Dynamic configuration  
 
-The chapters will copy and overwrite certain files in your workspace, so after running each script, commit the changes and push it, which will run it on CircleCI.
+The chapters will copy and overwrite certain files in your workspace to set it up for the next chapter. So after running each script, commit the changes and push it, which will run it on CircleCI.
 
 ### Overview of the project
 
