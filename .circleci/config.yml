@@ -1,8 +1,12 @@
 version: 2.1
+
+executors:
+  my-executor:
+    docker: 
+      - image: cimg/base:stable
 jobs:
   say-hello:
-    docker:
-      - image: cimg/base:stable
+    executor: my-executor
     steps:
       - checkout
       - run:
