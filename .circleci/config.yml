@@ -12,7 +12,14 @@ jobs:
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
+  say-hi:
+    executor: my-executor
+    steps:
+      - checkout
+      - run: echo "Hi there"
+      
 workflows:
   say-hello-workflow:
     jobs:
       - say-hello
+      - say-hi
