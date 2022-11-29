@@ -1,23 +1,19 @@
 version: 2.1
-
-executors:
-  my-executor:
-    docker: 
-      - image: cimg/base:stable
 jobs:
   say-hello:
-    executor: my-executor
+    docker:
+      - image: cimg/base:stable
     steps:
       - checkout
       - run:
           name: "Say hello"
-          command: "echo Hello, World!"
+          command: "echo Hello, world"
   say-hi:
-    executor: my-executor
+    docker:
+      - image: cimg/base:stable
     steps:
       - checkout
-      - run: echo "Hi there"
-      
+      - run: echo "Hi there"      
 workflows:
   say-hello-workflow:
     jobs:
