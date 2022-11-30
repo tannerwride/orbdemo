@@ -7,7 +7,7 @@ jobs:
       - image: 'cimg/node:16.16.0'
     steps:
       - checkout
-      - node/install-packages
+      - run: npm install 
       - run:
           name: Run tests
           command: npm run test-ci
