@@ -22,7 +22,7 @@ jobs:
           path: test-results
       - store_artifacts:
           path: test-results
-  build_docker_image:
+  deploy_docker_image:
     docker:
       - image: 'cimg/base:stable'
     steps:
