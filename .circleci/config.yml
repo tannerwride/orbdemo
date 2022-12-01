@@ -1,17 +1,16 @@
 version: 2.1
 orbs: 
-  node: circleci/node@5.0.2
+ docker: circleci/docker@2.1.4
 jobs:
-  build_and_test:
-    docker:
-      - image: 'cimg/node:16.16.0'
+  build_docker_image:
+    docker: 
+      - image: cimg/base:stable
     steps:
-      - checkout
-      - node/install-packages
-      - run:
-          name: Run tests
-          command: npm run test-ci
+      - setup_remote_docker:
+          docker_layer_caching: false
+      - docker/check
+
 workflows:
   basic_workflow:
     jobs:
-      - build_and_test
+      - build_docker_image
