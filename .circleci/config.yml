@@ -1,5 +1,5 @@
 version: 2.1
-orbs:
+orbs: 
   node: circleci/node@5.0.2
 jobs:
   build_and_test:
@@ -7,7 +7,7 @@ jobs:
       - image: 'cimg/node:16.16.0'
     steps:
       - checkout
-      - run: npm install 
+      - node/install-packages
       - run:
           name: Run tests
           command: npm run test-ci
