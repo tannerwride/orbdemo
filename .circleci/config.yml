@@ -8,10 +8,11 @@ jobs:
     steps:
       - setup_remote_docker
       - docker/check
-
+      - run: echo $DOCKER_LOGIN
 workflows:
   basic_workflow:
     jobs:
       - build_docker_image:
           context:
-            - cci-workshop
+            - cci-context
+          
