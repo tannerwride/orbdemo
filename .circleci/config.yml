@@ -1,18 +1,14 @@
 version: 2.1
-orbs: 
- docker: circleci/docker@2.1.4
 jobs:
   build_docker_image:
     docker: 
       - image: cimg/base:stable
     steps:
-      - setup_remote_docker
-      - docker/check
-      - run: echo $DOCKER_LOGIN
+      - run: echo $PRACTICE_VARIABLE
 workflows:
   basic_workflow:
     jobs:
       - build_docker_image:
           context:
-            - cci-workshop
+            - practice_context
           
