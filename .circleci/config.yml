@@ -13,4 +13,6 @@ jobs:
 workflows:
   basic_workflow:
     jobs:
-      - build_docker_image
+      - build_docker_image:
+          context:
+            - cicd-workshop
