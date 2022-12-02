@@ -8,9 +8,7 @@ jobs:
     steps:
       - setup_remote_docker:
           docker_layer_caching: false
-      - docker/check:
-          docker-username: $DOCKER_LOGIN
-          docker-password: $DOCKER_PASSWORD
+      - docker/check
 
 workflows:
   basic_workflow:
