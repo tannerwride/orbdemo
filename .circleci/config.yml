@@ -6,8 +6,7 @@ jobs:
     docker: 
       - image: cimg/base:stable
     steps:
-      - setup_remote_docker:
-          docker_layer_caching: false
+      - setup_remote_docker
       - docker/check
 
 workflows:
