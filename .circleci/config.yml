@@ -14,5 +14,5 @@ workflows:
     jobs:
       - build_docker_image:
           context:
-            - cci-context
+            - cci-workshop
           
