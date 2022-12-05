@@ -33,3 +33,10 @@ workflows:
   basic_test_deploy:
     jobs:
       - build_and_test
+      - build_image_push:
+          requires: 
+            - build_and_test
+          context:
+            - cci-workshop
+       
+          
