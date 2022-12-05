@@ -29,7 +29,7 @@ jobs:
       - run: 
             name: Build and push to Docker Hub
             command: | 
-              docker build -t $DOCKER_LOGIN/imagepush -t $DOCKER_LOGIN/imagepush .
+              docker build -t $DOCKER_LOGIN/imagepush .
               echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_LOGIN" --password-stdin
               docker push $DOCKER_LOGIN/imagepush
 workflows:
