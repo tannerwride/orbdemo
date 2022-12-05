@@ -28,9 +28,9 @@ jobs:
       - setup_remote_docker:
           docker_layer_caching: false
       - docker/build: 
-        - image: $DOCKER_LOGIN/imagepush
+          image: $DOCKER_LOGIN/imagepush
       - docker/push:
-        - image: $DOCKER_LOGIN/imagepush
+          image: $DOCKER_LOGIN/imagepush
 workflows:
   basic_test_deploy:
     jobs:
