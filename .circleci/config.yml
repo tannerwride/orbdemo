@@ -53,6 +53,7 @@ workflows:
       - build_image_push:
           requires: 
             - build_and_test
+            - dependency_vulnerability_scan
           context:
             - cci-workshop
        
