@@ -44,6 +44,8 @@ jobs:
       - snyk/scan:
           docker-image-name: $DOCKER_LOGIN/imagepush
           target-file: "Dockerfile"
+          fail-on-issues: false
+          monitor-on-build: false
       - docker/push:
           image: $DOCKER_LOGIN/imagepush
 workflows:
