@@ -3,6 +3,7 @@ version: 2.1
 orbs: 
   node: circleci/node@5.0.2
   docker: circleci/docker@2.1.4
+  snyk: snyk/snyk@1.4.0
 jobs:
   build_and_test:
     docker:
@@ -21,13 +22,22 @@ jobs:
           when: always
       - store_test_results:
           path: test-results
+  dependency_vulnerability_scan:
+    docker:
+      - image: cimg/node:16.16.0
+    steps:
+      - checkout
+      - node/install-packages
+      - snyk/scan:
+          fail-on-issues: true
+          monitor-on-build: false
   build_image_push:
     docker:
       - image: 'cimg/node:16.16.0'
     steps:
       - checkout
       - setup_remote_docker:
-          docker_layer_caching: true
+          docker_layer_caching: false
       - docker/check
       - docker/build: 
           image: $DOCKER_LOGIN/imagepush
@@ -37,6 +47,9 @@ workflows:
   basic_test_deploy:
     jobs:
       - build_and_test
+      - dependency_vulnerability_scan:
+          context:
+            - cci-workshop
       - build_image_push:
           requires: 
             - build_and_test
