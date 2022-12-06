@@ -41,6 +41,9 @@ jobs:
       - docker/check
       - docker/build: 
           image: $DOCKER_LOGIN/imagepush
+      - snyk/scan:
+          docker-image-name: imagepush:latest
+          target-file: "Dockerfile"
       - docker/push:
           image: $DOCKER_LOGIN/imagepush
 workflows:
