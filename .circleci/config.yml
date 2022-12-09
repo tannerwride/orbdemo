@@ -65,7 +65,7 @@ jobs:
           monitor-on-build: false
       - docker/push:
           image: $DOCKER_LOGIN/imagepush
-    create_do_k8s_cluster:
+  create_do_k8s_cluster:
       docker:
         - image: cimg/node:16.16.0
       steps:
