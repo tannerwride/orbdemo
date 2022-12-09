@@ -20,7 +20,7 @@ commands:
             wget https://github.com/digitalocean/doctl/releases/download/v<<parameters.version>>/doctl-<<parameters.version>>-linux-amd64.tar.gz
             tar xf ~/doctl-<<parameters.version>>-linux-amd64.tar.gz
             sudo mv ~/doctl /usr/local/bin
-
+# jobs
 jobs:
   build_and_test:
     docker:
