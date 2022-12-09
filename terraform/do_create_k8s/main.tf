@@ -18,7 +18,7 @@ terraform {
   backend "remote" {
     organization = "cci-workshop"
     workspaces {
-      name = "cicd-workshop-do"
+      name = "cci-workshop-do"
     }
   }
 }
