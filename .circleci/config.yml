@@ -109,6 +109,5 @@ workflows:
             - cci-workshop
       - create_do_k8s_cluster:
           requires:
-            - dependency_vulnerability_scan
             - build_image_push
-            - build_and_test
+      
