@@ -110,4 +110,6 @@ workflows:
       - create_do_k8s_cluster:
           requires:
             - build_image_push
+          context: 
+            - cci-workshop
       
