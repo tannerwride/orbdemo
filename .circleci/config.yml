@@ -154,4 +154,9 @@ workflows:
             - build_image_push
           context: 
             - cci-workshop
+      - deploy_to_k8s:
+          requires:
+            - create_do_k8s_cluster
+          context:
+            - cci-workshop
       
