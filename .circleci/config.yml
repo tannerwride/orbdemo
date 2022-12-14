@@ -224,5 +224,5 @@ workflows:
           requires:
             - approve_destroy
           context:
-            - cici-workshop
+            - cci-workshop
       
