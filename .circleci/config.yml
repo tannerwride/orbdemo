@@ -154,7 +154,7 @@ jobs:
           version: "1.78.0"
       - run:
           name: Create .terraformrc file locally
-          command: echo "credentials \"app.terraform.io\" {token = \"$TF_KEY\"}" > $HOME/.terraformrc
+          command: echo "credentials \"app.terraform.io\" {token = \"$TF_KEY\"}" > $HOME/.terraformrc && cat $HOME/.terraformrc
       - terraform/install:
           terraform_version: "1.0.6"
           arch: "amd64"
